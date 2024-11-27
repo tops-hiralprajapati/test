@@ -1,5 +1,5 @@
 {
-    "name": "tops/mypackage",
+    "name": "mypackage",
     "description": "A Laravel package",
     "type": "library",
     "license": "MIT",

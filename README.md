@@ -34,6 +34,6 @@ This will fetch the package from the GitHub repository and install it in your La
 ## Alternatively
 If you want to install a specific branch of the package, you can specify that directly in the composer require command:
 ```
-composer require tops/newegg:dev-master
+composer require tops/neweggapi:dev-master
 ```
 

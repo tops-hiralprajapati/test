@@ -1,8 +1,8 @@
 {
-    "name": "tops/newegg",
-    "description": "A Laravel package",
+    "name": "tops/neweggapi",
+    "description": "This is the library for newegg marketplace APIs",
     "type": "library",
-    "license": "MIT",
+    "license": "proprietary",
     "authors": [
         {
             "name": "Hiral Prajapati"
@@ -10,7 +10,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "MyVendor\\MyPackage\\": "src/"
+            "Tops\\NeweggApi\\": "src/"
         }
     },
     "minimum-stability": "dev",

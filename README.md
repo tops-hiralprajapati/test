@@ -20,7 +20,7 @@ In the Laravel project where you want to add the GitHub repository, follow these
     }
   ],
   "require": {
-    "tops-hiralprajapati/test": "dev-master"
+    "tops/newegg": "dev-master"
   }
 }
 ```
@@ -30,4 +30,10 @@ After adding the repository, you need to install the package. Run the following 
 composer update
 ```
 This will fetch the package from the GitHub repository and install it in your Laravel project.
+
+## Alternatively
+If you want to install a specific branch of the package, you can specify that directly in the composer require command:
+```
+composer require tops/newegg:dev-master
+```
 

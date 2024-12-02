@@ -1,6 +1,6 @@
 <?php
 
-namespace Tops\NeweggApi;
+namespace Tops\NeweggApi\Api;
 
 use Tops\NeweggApi\BaseApi;
 
@@ -20,7 +20,7 @@ class ReportApi extends BaseApi
      * @param array $params Optional additional query parameters to be appended to the URL.
      * @return array The response from the API request (success or error).
      * @author Hiral Prajapati <hiralprajapati@topsinfosolutions.com> | 28-11-2024
-     * About more Ref :- https://developer.newegg.com/newegg_marketplace_api/reports_management/submit_report_request/
+     * @link https://developer.newegg.com/newegg_marketplace_api/reports_management/submit_report_request/
     */
     public function submitReport($reqData = [], $params = [])
     {
@@ -36,7 +36,7 @@ class ReportApi extends BaseApi
      * @param array $params Optional additional query parameters to be appended to the URL.
      * @return array The response from the API request (status information).
      * @author Hiral Prajapati <hiralprajapati@topsinfosolutions.com> | 28-11-2024
-     * About more Ref :- https://developer.newegg.com/newegg_marketplace_api/reports_management/get_report_status/
+     * @link https://developer.newegg.com/newegg_marketplace_api/reports_management/get_report_status/
     */
     public function getReportStatus($reqData = [], $params = [])
     {
@@ -52,7 +52,7 @@ class ReportApi extends BaseApi
      * @param array $params Optional additional query parameters to be appended to the URL.
      * @return array The response from the API request (report results).
      * @author Hiral Prajapati <hiralprajapati@topsinfosolutions.com> | 28-11-2024
-     * About more Ref :- https://developer.newegg.com/newegg_marketplace_api/reports_management/get_report_result/
+     * @link https://developer.newegg.com/newegg_marketplace_api/reports_management/get_report_result/
     */
     public function getReportResult($reqData = [], $params = [])
     {

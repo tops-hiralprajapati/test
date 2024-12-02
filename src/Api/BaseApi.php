@@ -1,6 +1,6 @@
 <?php
 
-namespace Tops\NeweggApi;
+namespace Tops\NeweggApi\Api;
 
 use Illuminate\Support\Facades\Http;
 

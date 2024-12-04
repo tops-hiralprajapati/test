@@ -9,6 +9,7 @@ class BaseApi
     protected $apiUrl;
     protected $apiKey;
     protected $secretKey;
+    protected $sellerId;
 
     /**
      * Initialize newEgg credentials and base configurations.

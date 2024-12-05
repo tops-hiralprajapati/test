@@ -2,7 +2,7 @@
 
 namespace Tops\NeweggApi\Api;
 
-use Tops\NeweggApi\BaseApi;
+use Tops\NeweggApi\Api\BaseApi;
 
 class FeedApi extends BaseApi
 {

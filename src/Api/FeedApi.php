@@ -48,14 +48,17 @@ class FeedApi extends BaseApi
      *
      * Sends a GET request to the `getFeedResultUrl` to download or view the results of a feed submission.
      *
+     * @param string $resultId The request number for the feed that needs to be checked.
      * @param array $reqData The data to be sent with the request.
      * @param array $params Optional additional query parameters to be appended to the URL.
      * @return array The response from the API request (report results).
      * @author Hiral Prajapati <hiralprajapati@topsinfosolutions.com> | 29-11-2024
      * @link https://developer.newegg.com/newegg_marketplace_api/datafeed_management/get_feed_result/
     */
-    public function getFeedResult($reqData = [], $params = [])
+    public function getFeedResult($resultId, $reqData = [], $params = [])
     {
-        return $this->makeRequest($this->getFeedResultUrl, 'GET', $reqData, $params);
+        $url = $this->getFeedResultUrl.'/'.$resultId;
+
+        return $this->makeRequest($this->url, 'GET', $reqData, $params);
     }
 }

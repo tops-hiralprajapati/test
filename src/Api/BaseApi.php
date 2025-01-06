@@ -65,11 +65,6 @@ class BaseApi
         try {
 
             $url = $this->buildUrl($baseUrl, $params);
-            
-            // If extra parameters are provided, merge them with seller ID
-            if (!empty($params)) {
-                $queryParams = array_merge($queryParams, $params);
-            }
 
             // Configure headers
             $headers = [

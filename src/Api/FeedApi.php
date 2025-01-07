@@ -7,7 +7,7 @@ use Tops\NeweggApi\Api\BaseApi;
 class FeedApi extends BaseApi
 {
     // Endpoint URLs for feed-related actions
-    protected $submitFeedUrl = "/datafeedmgmt/feeds/submitfeed";
+    protected $submitFeedUrl    = "/datafeedmgmt/feeds/submitfeed";
     protected $getFeedStatusUrl = "/datafeedmgmt/feeds/status";
     protected $getFeedResultUrl = "/datafeedmgmt/feeds/result";
 
@@ -59,6 +59,6 @@ class FeedApi extends BaseApi
     {
         $url = $this->getFeedResultUrl.'/'.$resultId;
 
-        return $this->makeRequest($this->url, 'GET', $reqData, $params);
+        return $this->makeRequest($url, 'GET', $reqData, $params);
     }
 }

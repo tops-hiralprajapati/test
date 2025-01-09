@@ -7,9 +7,8 @@ use Tops\NeweggApi\Api\BaseApi;
 class OrderApi extends BaseApi
 {
     // Endpoint URLs for order-related actions
-    protected $getOrderUrl     = "/ordermgmt/order/orderinfo";
-    protected $orderCancelUrl  = "/ordermgmt/orderstatus/orders/{ordernumber}";
-    protected $orderShipUrl    = "/ordermgmt/orderstatus/orders/{ordernumber}";
+    protected $getOrderUrl          = "/ordermgmt/order/orderinfo";
+    protected $orderStatusUpdateUrl = "/ordermgmt/orderstatus/orders";
 
     /**
      * Retrieve a list of orders or specific order details from the Newegg API.
@@ -31,7 +30,7 @@ class OrderApi extends BaseApi
     /**
      * Cancel an order via the Newegg API.
      *
-     * This function sends a PUT request to the `orderCancelUrl` to request the cancellation of specified orders.
+     * This function sends a PUT request to the `orderStatusUpdateUrl` to request the cancellation of specified orders.
      *
      * @param string $orderNumber The order number for the order that needs to be canceled.
      * @param array $reqData An array containing the request payload, such as order numbers or filters.
@@ -42,7 +41,7 @@ class OrderApi extends BaseApi
     */
     public function cancelOrder($orderNumber, $reqData = [], $params = [])
     {   
-        $url = $this->orderCancelUrl.'/'.$orderNumber;
+        $url = $this->orderStatusUpdateUrl.'/'.$orderNumber;
 
         return $this->makeRequest($url, 'PUT', $reqData, $params);
     }
@@ -50,7 +49,7 @@ class OrderApi extends BaseApi
     /**
      * Ship an order via the Newegg API.
      *
-     * This function sends a PUT request to the `orderShipUrl` to request the ship of specified orders.
+     * This function sends a PUT request to the `orderStatusUpdateUrl` to request the ship of specified orders.
      *
      * @param string $orderNumber The order number for the order that needs to be shipped.
      * @param array $reqData An array containing the request payload, such as order numbers or filters.
@@ -61,7 +60,7 @@ class OrderApi extends BaseApi
     */
     public function shipOrder($orderNumber, $reqData = [], $params = [])
     {   
-        $url = $this->orderShipUrl.'/'.$orderNumber;
+        $url = $this->orderStatusUpdateUrl.'/'.$orderNumber;
 
         return $this->makeRequest($url, 'PUT', $reqData, $params);
     }

@@ -86,7 +86,7 @@ class BaseApi
             if ($response->successful()) {
                 return [
                     'status'      => 'success',
-                    'data'        => $response->body(),
+                    'data'        => $response->json(),
                     'status_code' => 200
                 ];
             }

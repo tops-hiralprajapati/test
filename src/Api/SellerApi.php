@@ -21,6 +21,6 @@ class SellerApi extends BaseApi
     */
     public function sellerStatusCheck($params = [])
     {
-        return $this->makeRequest($this->resourceUrl 'GET', [], $params);
+        return $this->makeRequest($this->resourceUrl, 'GET', [], $params);
     }
 }
